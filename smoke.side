@@ -24,14 +24,14 @@
       "id": "65d408f1-1338-4282-911a-5977b758818f",
       "comment": "",
       "command": "waitForElementVisible",
-      "target": "linkText=Home",
+      "target": "css=a[href=\"index.html\"]",
       "targets": [],
       "value": "20000"
     }, {
       "id": "d87f9b50-721c-4343-bde7-c89eba158835",
       "comment": "",
       "command": "click",
-      "target": "linkText=Home",
+      "target": "css=a[href=\"index.html\"]",
       "targets": [],
       "value": ""
     }, {
@@ -131,14 +131,14 @@
       "id": "aae451ff-8b5c-4d09-8cd5-0c9abbdfb1db",
       "comment": "",
       "command": "waitForElementVisible",
-      "target": "linkText=Admin",
+      "target": "css=a[href=\"admin.html\"]",
       "targets": [],
       "value": "20000"
     }, {
       "id": "e0d78474-bb67-4272-81e9-14e05eece00b",
       "comment": "",
       "command": "click",
-      "target": "linkText=Admin",
+      "target": "css=a[href=\"admin.html\"]",
       "targets": [
         ["linkText=Admin", "linkText"],
         ["css=li:nth-child(4) > a", "css:finder"],
@@ -215,17 +215,10 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "020a956f-4aab-4eb5-a317-f39aaf84a787",
+      "id": "03377f2c-7e92-4e9e-b657-95450aca7e68",
       "comment": "",
       "command": "waitForElementVisible",
-      "target": "linkText=Directory",
-      "targets": [],
-      "value": "20000"
-    }, {
-      "id": "2f43c93b-1ecc-493b-be94-08e22f3711d2",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Directory",
+      "target": "css=a[href=\"directory.html\"]",
       "targets": [
         ["linkText=Directory", "linkText"],
         ["css=li:nth-child(3) > a", "css:finder"],
@@ -235,7 +228,14 @@
         ["xpath=//li[3]/a", "xpath:position"],
         ["xpath=//a[contains(.,'Directory')]", "xpath:innerText"]
       ],
-      "value": ""
+      "value": "20000"
+    }, {
+      "id": "65270961-1419-4902-bf6f-13b907a3bb4d",
+      "comment": "",
+      "command": "click",
+      "target": "css=a[href=\"directory.html\"]",
+      "targets": [],
+      "value": "Directory"
     }, {
       "id": "676494f6-7b96-4138-a8ba-9b76ba9b20e1",
       "comment": "",
@@ -310,14 +310,14 @@
       "id": "e80f3800-fdba-483a-8adf-f2b31be8672f",
       "comment": "",
       "command": "waitForElementVisible",
-      "target": "linkText=Join",
+      "target": "css=a[href=\"join.html\"]",
       "targets": [],
       "value": "20000"
     }, {
       "id": "86cc70a4-21ad-4d61-8655-f66db0d8d107",
       "comment": "",
       "command": "click",
-      "target": "linkText=Join",
+      "target": "css=a[href=\"join.html\"]",
       "targets": [
         ["linkText=Join", "linkText"],
         ["css=li:nth-child(2) > a", "css:finder"],
