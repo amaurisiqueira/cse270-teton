@@ -150,19 +150,26 @@
       ],
       "value": ""
     }, {
-      "id": "8e51ad50-d339-4737-aee4-fdc168e780d7",
+      "id": "c7d09850-887f-414a-8ccc-3f501e2c6158",
       "comment": "",
-      "command": "click",
-      "target": "id=username",
+      "command": "type",
+      "target": "id=password",
       "targets": [
-        ["id=username", "id"],
-        ["name=username", "name"],
-        ["css=#username", "css:finder"],
-        ["xpath=//input[@id='username']", "xpath:attributes"],
-        ["xpath=//div[@id='content']/main/section/form/fieldset/label/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/main/section/form/fieldset/label[2]/input", "xpath:idRelative"],
+        ["xpath=//label[2]/input", "xpath:position"]
       ],
-      "value": ""
+      "value": "Password"
+    }, {
+      "id": "7b4e304e-c140-48b2-ab70-bf33d17f78e0",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [],
+      "value": "Username"
     }, {
       "id": "49a39e44-5577-45a4-979f-595c2f4605d5",
       "comment": "",

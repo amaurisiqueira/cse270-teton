@@ -44,6 +44,8 @@ class TestSmokeTest():
     self.driver.set_window_size(1217, 692)
     WebDriverWait(self.driver, 20).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, "a[href=\"admin.html\"]")))
     self.driver.find_element(By.CSS_SELECTOR, "a[href=\"admin.html\"]").click()
+    self.driver.find_element(By.ID, "password").send_keys("Password")
+    self.driver.find_element(By.ID, "username").send_keys("Username")
     elements = self.driver.find_elements(By.ID, "username")
     assert len(elements) > 0
     self.driver.find_element(By.CSS_SELECTOR, ".mysubmit:nth-child(4)").click()
