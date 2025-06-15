@@ -61,15 +61,17 @@ class TestSmokeTest():
     elements = self.driver.find_elements(By.NAME, "fname")
     assert len(elements) > 0
     self.driver.find_element(By.NAME, "fname").click()
-    self.driver.find_element(By.NAME, "fname").send_keys("Perico Los Palotes")
-    self.driver.find_element(By.NAME, "submit").click()
+    self.driver.find_element(By.NAME, "fname").send_keys("juanito")
     self.driver.find_element(By.NAME, "lname").click()
-    self.driver.find_element(By.NAME, "lname").send_keys("Gomes")
+    self.driver.find_element(By.NAME, "lname").send_keys("mena")
     self.driver.find_element(By.NAME, "bizname").click()
-    self.driver.find_element(By.NAME, "bizname").send_keys("das")
+    self.driver.find_element(By.NAME, "bizname").send_keys("juanito el gato")
     self.driver.find_element(By.NAME, "biztitle").click()
-    self.driver.find_element(By.NAME, "biztitle").send_keys("asda")
-    elements = self.driver.find_elements(By.NAME, "lemail")
-    assert len(elements) > 0
+    self.driver.find_element(By.NAME, "biztitle").send_keys("manager")
     self.driver.find_element(By.CSS_SELECTOR, "fieldset").click()
+    self.driver.find_element(By.NAME, "submit").click()
+    self.driver.find_element(By.NAME, "email").click()
+    elements = self.driver.find_elements(By.NAME, "email")
+    assert len(elements) > 0
+  
   
