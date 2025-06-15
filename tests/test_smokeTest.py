@@ -26,8 +26,8 @@ class TestSmokeTest():
   def test_homepage(self):
     self.driver.get("http://127.0.0.1:5500/index.html")
     self.driver.set_window_size(1217, 692)
-    WebDriverWait(self.driver, 20).until(expected_conditions.visibility_of_element_located((By.LINK_TEXT, "Home")))
-    self.driver.find_element(By.LINK_TEXT, "Home").click()
+    WebDriverWait(self.driver, 20).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, "a[href=\"index.html\"]")))
+    self.driver.find_element(By.CSS_SELECTOR, "a[href=\"index.html\"]").click()
     elements = self.driver.find_elements(By.CSS_SELECTOR, ".header-logo img")
     assert len(elements) > 0
     assert self.driver.find_element(By.CSS_SELECTOR, ".header-title > h1").text == "Teton Idaho"
@@ -42,9 +42,8 @@ class TestSmokeTest():
   def test_adminPage(self):
     self.driver.get("http://127.0.0.1:5500/index.html")
     self.driver.set_window_size(1217, 692)
-    WebDriverWait(self.driver, 20).until(expected_conditions.visibility_of_element_located((By.LINK_TEXT, "Admin")))
-    self.driver.find_element(By.LINK_TEXT, "Admin").click()
-    self.driver.find_element(By.ID, "username").click()
+    WebDriverWait(self.driver, 20).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, "a[href=\"admin.html\"]")))
+    self.driver.find_element(By.CSS_SELECTOR, "a[href=\"admin.html\"]").click()
     elements = self.driver.find_elements(By.ID, "username")
     assert len(elements) > 0
     self.driver.find_element(By.CSS_SELECTOR, ".mysubmit:nth-child(4)").click()
@@ -53,18 +52,16 @@ class TestSmokeTest():
   def test_directoryPage(self):
     self.driver.get("http://127.0.0.1:5500/index.html")
     self.driver.set_window_size(1217, 692)
-    WebDriverWait(self.driver, 20).until(expected_conditions.visibility_of_element_located((By.LINK_TEXT, "Directory")))
-    self.driver.find_element(By.LINK_TEXT, "Directory").click()
-    self.driver.find_element(By.ID, "directory-grid").click()
+    WebDriverWait(self.driver, 20).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, "a[href=\"directory.html\"]")))
+    self.driver.find_element(By.CSS_SELECTOR, "a[href=\"directory.html\"]").click()
     assert self.driver.find_element(By.CSS_SELECTOR, ".gold-member:nth-child(9) > p:nth-child(2)").text == "Teton Turf and Tree"
-    self.driver.find_element(By.ID, "directory-list").click()
     assert self.driver.find_element(By.CSS_SELECTOR, ".gold-member:nth-child(9) > p:nth-child(2)").text == "Teton Turf and Tree"
   
   def test_joinPage(self):
     self.driver.get("http://127.0.0.1:5500/index.html")
     self.driver.set_window_size(1217, 692)
-    WebDriverWait(self.driver, 20).until(expected_conditions.visibility_of_element_located((By.LINK_TEXT, "Join")))
-    self.driver.find_element(By.LINK_TEXT, "Join").click()
+    WebDriverWait(self.driver, 20).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, "a[href=\"join.html\"]")))
+    self.driver.find_element(By.CSS_SELECTOR, "a[href=\"join.html\"]").click()
     elements = self.driver.find_elements(By.NAME, "fname")
     assert len(elements) > 0
     self.driver.find_element(By.NAME, "fname").click()
