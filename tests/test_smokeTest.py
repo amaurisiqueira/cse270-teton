@@ -12,11 +12,7 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.chrome.options import Options
 #from selenium.webdriver.firefox.options import Options
 class TestSmokeTest():
-  def wait_and_click(driver, by, value, timeout=10):
-    WebDriverWait(driver, timeout).until(
-        EC.element_to_be_clickable((by, value))
-    ).click()
-    
+     
   def setup_method(self, method):
     options = Options()
     options.add_argument("--headless=new")
